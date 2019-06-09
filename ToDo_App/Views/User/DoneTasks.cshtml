@@ -1,0 +1,31 @@
+﻿
+@{
+    ViewBag.Title= "DoneTasks";
+}
+@model User
+
+<h2>@ViewBag.Title</h2>
+
+<table style="border:2px solid black; width:100%">
+    <thead>
+        <tr>
+            <th>
+                @ViewBag.Title
+            </th>
+        </tr>
+    </thead>
+    <tbody>
+        @foreach (var task in Model.Tasks)
+        {
+            if (task.Status == Status.Done)
+            {
+                <tr>
+                    <td style="border:1px solid black">
+                     @task.Title
+                    </td>
+                </tr>
+            }
+        }
+    </tbody>
+</table>
+

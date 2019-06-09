@@ -1,0 +1,30 @@
+﻿@model User
+@{
+    ViewBag.Title = "NotDone";
+}
+
+
+<h1>@ViewBag.Title</h1>
+
+<table style="border:2px solid black; width:100%">
+    <thead>
+        <tr>
+            <th>
+                @ViewBag.Title
+            </th>
+        </tr>
+    </thead>
+    <tbody>
+        @foreach (var task in Model.Tasks)
+        {
+            if (task.Status == Status.NotDone)
+            {
+                <tr >
+                    <td style="border:1px solid black">
+                        @task.Title
+                    </td>
+                </tr>
+            }
+        }
+    </tbody>
+</table>
