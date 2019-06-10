@@ -12539,11 +12539,11 @@
   "project": {
     "version": "1.0.0",
     "restore": {
-      "projectUniqueName": "C:\\Users\\Angela\\source\\repos\\ToDo_App\\ToDo_App\\ToDo_App.csproj",
+      "projectUniqueName": "C:\\Users\\Angela\\Desktop\\ToDo_App\\ToDo_App\\ToDo_App.csproj",
       "projectName": "ToDo_App",
-      "projectPath": "C:\\Users\\Angela\\source\\repos\\ToDo_App\\ToDo_App\\ToDo_App.csproj",
+      "projectPath": "C:\\Users\\Angela\\Desktop\\ToDo_App\\ToDo_App\\ToDo_App.csproj",
       "packagesPath": "C:\\Users\\Angela\\.nuget\\packages\\",
-      "outputPath": "C:\\Users\\Angela\\source\\repos\\ToDo_App\\ToDo_App\\obj\\",
+      "outputPath": "C:\\Users\\Angela\\Desktop\\ToDo_App\\ToDo_App\\obj\\",
       "projectStyle": "PackageReference",
       "fallbackFolders": [
         "C:\\Program Files\\dotnet\\sdk\\NuGetFallbackFolder"

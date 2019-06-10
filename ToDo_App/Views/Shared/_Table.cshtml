@@ -1,0 +1,45 @@
+﻿@model User
+
+<table style="border:2px solid black; width:100%">
+    <thead>
+        <tr>
+            <th colspan="5">
+                @ViewBag.Title
+            </th>
+        </tr>
+    </thead>
+    <tbody>
+        <tr style="text-align:center">
+            <td><b>Title</b></td>
+            <td><b>Description</b></td>
+            <td><b>Importance</b></td>
+            <td><b>Status</b></td>
+            <td><b>Type</b></td>
+        </tr>
+        @foreach (var task in Model.Tasks)
+        {
+            if (task.Status == Status.Done)
+            {
+                <tr style="text-align:center">
+
+                    <td style="border:1px solid black">
+                        @task.Title
+                    </td>
+                    <td style="border:1px solid black">
+                        @task.Description
+                    </td>
+                    <td style="border:1px solid black">
+                        @task.Importance
+                    </td>
+                    <td style="border:1px solid black">
+                        @task.Status
+                    </td>
+                    <td style="border:1px solid black">
+                        @task.Type
+                    </td>
+
+                </tr>
+            }
+        }
+    </tbody>
+</table>

@@ -12,7 +12,6 @@ namespace ToDo_App.Controllers
     public class UserController : Controller
     {
         private List<Task> _tasks;
-        private List<User> _users;
         public UserController()
         {
             _tasks = new List<Task>()
@@ -22,9 +21,23 @@ namespace ToDo_App.Controllers
                    Title="Homework",
                    Description="Description",
                    Importance=Importance.Important,
-                   Status=Status.NotDone,
+                   Status=Status.Done,
                    Type=Models.DomainModels.Type.Work,
-
+                   SubTasks=new List<SubTask>()
+                   {
+                      new SubTask()
+                      {
+                            Title="Learn MVC",
+                            Description="Description",
+                            Done=true
+                      },
+                      new SubTask()
+                      {
+                            Title="Make MVC Application",
+                            Description="Description",
+                            Done=true
+                      }
+                   }
                 },
                 new Task()
                 {
@@ -33,43 +46,40 @@ namespace ToDo_App.Controllers
                    Importance=Importance.MediumImportance,
                    Status=Status.NotDone,
                    Type=Models.DomainModels.Type.Hoby,
+                   SubTasks=new List<SubTask>()
+                   {
+                        new SubTask()
+                        {
+                                Title="Football",
+                                Description="Description",
+                               Done=true
+                        },
+                        new SubTask()
+                        {
+                                Title="Basketball",
+                                Description="description",
+                                Done=false
+                        },
+                   }
                 },
                 new Task()
                 {
                    Title="Work",
                    Description="Description",
                    Importance=Importance.Important,
-                   Status=Status.NotDone,
+                   Status=Status.Done,
                    Type=Models.DomainModels.Type.Work,
+                   SubTasks=new List<SubTask>()
+                   {
+                       new SubTask()
+                       {
+                            Title="Make React Project",
+                            Description="Description",
+                            Done=true
+                       }
+                   }
                 }
             };
-
-            _users = new List<User>()
-            {
-            new User()
-            {
-                Id = 1,
-                FirstName = "Goce",
-                LastName = "Kabov",
-                Age = 26,
-                Email = "goce@yahoo.com",
-                Password = "12345",
-                FreeTime = 10.5M,
-                Tasks = _tasks
-            },
-             new User()
-            {
-                Id = 2,
-                FirstName = "John",
-                LastName = "Doe",
-                Age = 27,
-                Email = "john@yahoo.com",
-                Password = "1231231",
-                FreeTime = 10.5M,
-                Tasks = _tasks
-            }
-        };
-
         }
         public IActionResult Index(int? id)
         {
@@ -81,19 +91,46 @@ namespace ToDo_App.Controllers
         }
         public IActionResult DoneTasks()
         {
-            User goce = _users[0];
+            User goce = new User()
+            {
+                FirstName = "Goce",
+                LastName = "Kabov",
+                Age = 26,
+                Email = "goce@yahoo.com",
+                Password = "12345",
+                FreeTime = 10.5M,
+                Tasks = _tasks
+            };
 
             return View(goce);
         }
         public IActionResult InProgress()
         {
-            User goce = _users[0];
+            User goce = new User()
+            {
+                FirstName = "Goce",
+                LastName = "Kabov",
+                Age = 26,
+                Email = "goce@yahoo.com",
+                Password = "12345",
+                FreeTime = 10.5M,
+                Tasks = _tasks
+            };
 
             return View(goce);
         }
         public IActionResult NotDone()
         {
-            User goce = _users[0];
+            User goce = new User()
+            {
+                FirstName = "Goce",
+                LastName = "Kabov",
+                Age = 26,
+                Email = "goce@yahoo.com",
+                Password = "12345",
+                FreeTime = 10.5M,
+                Tasks = _tasks
+            };
 
             return View(goce);
         }

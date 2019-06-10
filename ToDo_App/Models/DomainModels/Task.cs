@@ -12,7 +12,7 @@ namespace ToDo_App.Models.DomainModels
         public Importance Importance { get; set; }
         public Status Status { get; set; }
         public Type Type { get; set; }
-       // public List<SubTask> SubTasks { get; set; }
+        public List<SubTask> SubTasks { get; set; }
     }
     public enum Importance
     {

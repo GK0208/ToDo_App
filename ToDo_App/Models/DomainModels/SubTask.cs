@@ -9,7 +9,6 @@ namespace ToDo_App.Models.DomainModels
     {
         public string Title { get; set; }
         public string Description { get; set; }
-        public int MyProperty { get; set; }
         public bool Done { get; set; }
     }
 }
