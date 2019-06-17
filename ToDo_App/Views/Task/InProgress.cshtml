@@ -44,7 +44,7 @@
                         @task.Type
                     </td>
                     <td style="border:1px solid black">
-                        @if (task.SubTasks.Count > 0)
+                        @if (task.SubTasks!= null)
                         {
                             <ul>
                                 @foreach (var sub in task.SubTasks)

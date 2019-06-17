@@ -9,7 +9,6 @@ namespace ToDo_App.Models.ViewModels
 {
     public class TaskViewModel
     {
-        public Task Task { get; set; }
-        public List<SubTask> SubTasks { get; set; }
+        public List<Task> Tasks { get; set; }
     }
 }
